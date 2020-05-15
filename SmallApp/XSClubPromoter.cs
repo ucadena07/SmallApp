@@ -3,23 +3,28 @@ namespace SmallApp
 {
     public class XSClubPromoter : Promoter, IBodyBuilder, IVlogger
     {
-        public XSClubPromoter()
+        public XSClubPromoter(string firstName, string lastName, long cellPhone) : base(firstName, lastName, cellPhone)
         {
-        }
-
-        public override void Promote()
-        {
-            throw new NotImplementedException();
         }
 
         public void Vlog()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("I used a DSLR in order to vlog.");
         }
 
         public void Workout()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("I workout at my house");
+        }
+
+        protected override void ShareWithInnerCircle()
+        {
+            Console.WriteLine("I shared with my instagram folowers.");
+        }
+
+        protected override void UsePaidAds()
+        {
+            Console.WriteLine("I use facebook ads.");
         }
     }
 }
